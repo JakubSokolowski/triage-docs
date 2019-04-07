@@ -1,0 +1,22 @@
+\subsection{KAM - mapa poszkodowanych}
+\subsubsection{Data}
+25.03
+\subsubsection{Osoby odpowiedzialne}
+Oliwier Salamon, Jakub Sokołowski
+\subsubsection{Scenariusze}
+Aktor: Kierujący Akcją Medyczną
+\subsubsection{Scenariusz 1}
+Po przejściu na widok "mapa", KAM widzi mapę, na której znajdują się znaczniki reprezentujące lokalizację poszkodowanych.
+\subsubsection{Scenariusz 2}
+Po kliknięciu na znacznik, po prawej stronie mapy pokaże się panel z danymi pacjenta, zdefiniowanymi przez dokument \textbf{victimInfo}.
+\subsubsection{Scenariusz 3}
+Po kliknięciu na przycisk "odśwież", z bazy danych pobierane są obecne dane i widok jest odświeżany.
+\subsubsection{Specyfikacja}
+\begin{itemize}
+    \item{Widok "mapa" będzie dostępny tylko po zalogowaniu}
+    \item{Dane widoku mapy}
+    \item{Do generowania ma zostać API Google Maps}
+    \item{Dane są automatycznie odświeżane co 30s}
+\end{itemize}
+\subsubsection{Wymagania zewnętrzne}
+Baza danych z dokumentami \textbf{victimInfo}.
