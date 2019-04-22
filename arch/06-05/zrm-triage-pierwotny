@@ -1,0 +1,35 @@
+ZRM - TRIAGE PIERWOTNY
+
+DATA:
+06-05
+
+OSOBY ODPOWIEDZIALNE:
+
+SCENARIUSZ 1:
+RATOWNIK wybiera urządzenie z listy w widoku "POSZKODOWANI". Urządzenie jest 
+zapisane jako ostanio wybrane urządzenie, przejście do widoku triage pierwotny.
+
+SCENARIUSZ 2:
+RATOWNIK przechodzi do widoku bezpośrednio, ale ostatnie urządzenie nie jest 
+wybrane - na widoku wyświetla sie informacja "Brak wybranego urządzenia / ..?"
+
+SCENARIUSZ 3: 
+RATOWNIK przechodzi do widoku, ostatnie urządzenie jest wybrane - wyświetlany
+jest zwyły widok urządzenia.
+
+
+SPECYFIKACJA
+Dodanie nowego widoku "TRIAGE PIERWOTNY".
+Informacje na widoku:
+- informacja o obowiązującej metodzie triage, pobrana z konfiguracji akcji
+- informacje o odczytach czujnika MPZ
+
+W zależnośći od nadanej metody triage na widoku znajdą się przyciski które
+odpowiadają kategoriom, jakie można nadać w danej metodzie. Po kliknięciu 
+przycisku, wykonywanie jest połącznie BT z MPZ i nadany jest stan. Po udanym
+nadaniu stanu, wyświetlona jest informacja o nadaniu stanu, następnie wykonywane
+jest połączenie z aplikacją KAM i wysłana jest informacja o decyzji. 
+
+WYMAGANIA ZEWNĘTRZNE:
+Konfiguracja akcji załadowana.
+

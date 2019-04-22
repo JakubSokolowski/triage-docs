@@ -1,0 +1,8 @@
+KAM-SERWER: NADAWANIE PLANU AKCJI
+DATA: 06.05
+OSOBY ODPOWIEDZIALNE:
+SPECYFIKACJA: 
+KAM pobiera z bazy danych obowiązującą konfiguracje akcji, i nadaje ją do
+wszystkich aplikacji ZRM. 
+OPCJA 1: informacje w pakiecie rozgłoszeniowym bluetooth
+OPCJA 2: informacje nadawane przez połączenia
