@@ -1,0 +1,31 @@
+ZRM - TRYB PLANOWANIA AKCJI
+
+DATA:
+06-05
+
+OSOBY ODPOWIEDZIALNE:
+
+SPECYFIKACJA:
+Przed rozpoczęciem akcji, aplikacja ZRM może pobrać konfiguracje akcji od KAM -
+zarządzenia obowiązujace podczas akcji, takie jak metoda triage, ... , ?. 
+Zostanie do tego utworzony oddzielny widok w aplikacji, w którym można będzie
+wprowadzić ręcznie informacje / pobrać konfiguracje z serwera / ?.
+
+Kontekst akcji ratunkowej: 
+- metoda triage
+- ID ZRM ?
+- dodatkowe wytyczne: ?
+
+OPCJA 1: Kam rozgłasza konfiguracje akcji
+WYMAGANIA: Konfiguracja miescie się w pakiecie rozgłoszeniowym BT
+           Aplikacja ZRM ma możliwośc nasłuchiwania pakietów rozgłoszeniowych
+SCENARIUSZ: Po naciśnięciu przycisku "Rozpocznij akcję" aplikacja przez ~30s?
+nasłuchuje unikalnego pakietu KAM, w którym znajdzie sie konfiguracja akcji.
+
+OPCJA 2: Bezpośrednie połączenie z KAM i odberanie konfiguracji.
+WYMAGANIA: KAM i ZRM mają możliwość sprawnego połączenia BT. 
+SCENARIUSZ: Po naciśnięciu przycisku "Rozpocznij akcję" aplikacja wysyła prośbę
+o komunikacje do KAM, gdzie ta prośba jest zakolejkowana, potem wykonane jest
+połącznie BT między KAM i ZRM i konfiguracja jest przesyłana
+
+

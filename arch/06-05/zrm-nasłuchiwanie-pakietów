@@ -1,0 +1,16 @@
+ZRM NASŁUCHIWANIE PAKIETÓW MPZ
+
+DATA: 06.05
+
+OSOBY ODPOWIEDZIALNE:
+
+SPECYFIKACJA: 
+Utworzony jest nowy widok - "POSZKODOWANI". Na tym widoku znajdzie sie
+lista urządzeń MPZ. Po naciśnięciu przycisku skanuj, lista jest odświeżana. 
+W elemencie listy będą widoczne następujace dane - ID urządzenia i odczyt
+czujników
+Skan urządzeń będzie odbywał się poprzez nasłuchiwanie pakietów rozgł MPZ
+Skan nie powinien blokować widoku - powinien odbywać się asynchronicznie. 
+Po kliknięciu na jeden z monitorów na liście, aplikacja wykona przejście do
+ widoku "TRIAGE".
+

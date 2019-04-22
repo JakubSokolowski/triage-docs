@@ -1,0 +1,21 @@
+Biblioteka do kodowania/odkodowania odczytu MPZ
+
+DATA:
+06.05
+
+OSOBY ODPOWIEDZIALNE:
+
+SPECYFIKACJA:
+Biblioteka Java, która pozwala na zakodowanie i odkodowanie danych z czujników MPZ
+w pakiecie rozgłoszeniowym BT.
+- MPZ - zakodowanie danych czujnika w pojedynczym pakiecie rozgłoszeniowym oraz
+"uformowanie" pakietów w taki sposbób, by można było je łatwo odróżnić od innych
+- KAM - wychwytywanie pakietów MPZ z wszystkich nasłuchiwanych, oraz odkodowanie odczytu zawartego w takim pakiecie.
+
+DANE W PAKIECIE:
+- ID urządzenia
+- ID ZRM ?
+- Odczyt czujnika 1
+- Odczyt czujnik 2
+- Odczyt GPS
+- Czas odczytu 

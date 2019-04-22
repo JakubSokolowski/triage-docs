@@ -1,0 +1,33 @@
+MONITOR
+- zakodowanie i rozkodowanie lini zycia w pakiecie rozgłoszeniowym
+- połączenie z ZRM w celu odebrania / nadania stanu
+ZRM
+- tryb planowania akcji - nadanie obowiązującego trybu triage
+	OPCJA 1 - połączeniowa
+	OPCJA 2 - chwilowe nasłuchiwanie pakietów KAM
+- tryb triage pierwotny
+	- połącznie z sensorem, odebranie linii życia i nadanie
+	  kategorii
+- tryb triage wtórny
+	- połączenie z sensorem, odebranie linii życia i wprowadzenie dodatkowych
+	  informacji o poszkodowanym
+- tryb wysłania raportu
+	- wysłanie raportu ZRM o nadanym stanie do KAM
+
+KAM-FRONT
+	- lepszy widok szczegółowy?
+	- odświeżanie informacji z mapy
+	- wyświetlanie linii zycia
+KAM-SERWER
+	- nasłuchiwanie pakietów bluetooth
+	- zapiwywanie pakietów in-memory na czas trwania akcji
+	- okresowe asynchroniczne wysyłanie stanu akcji do bazy
+	- 
+	- połączenie bluetooth z ZRM
+	- endpointy do rzeczy w bazie
+		- api mapy
+		- api informacji szczegółowych
+		- api linii życia
+DOCS
+- porównanie technologi LPWA (Lora, Sigfox, NbIOT)
+- poprawa uwag Nikodema

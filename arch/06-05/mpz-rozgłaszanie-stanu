@@ -1,0 +1,40 @@
+MPZ - NADAWANIE STANU
+
+DATA: 06.05
+
+OSOBY ODPOWIEDZIALNE:
+
+STANY MPZ:
+(R) - stan jest rozgłaszany
+ 0 WYŁĄCZONY
+
+(R) 1 - WŁACZONY NIE NADAJĄCY
+(R) 2 - WŁĄCZONY NIE ZTRIAGEOWANY
+(R) 3 - WŁĄCZONY PO TRIAGE-U PIERWOTNYM
+(R) 4 - WŁĄCZONY PO TRIAGE-U WTÓRNYM
+
+SPECYFIKACJA:
+W pakiecie rozgłoszeniowym należy zakodowąc stany w których znajdzie się MPZ, a 
+następnie nadać ten pakiet w trybie rozgłoszeniowym BT.
+
+SCENARIUSZ 1:
+STAN WYŁĄCZONY - monitor jest wyłączony i nie nadaje stanu.
+
+SCENARIUSZ 2:
+STAN WŁĄCZONY NIE NADAJĄCY - monitor jest włączony, ale czujniki nie są podłączone.
+
+SCENARIUSZ 3:
+STAN WŁĄCZONY NIE ZTRIAGEOWANY - monitor jest włączony, czujniki są podłączone i 
+można odczytać ich wartości. Wartości z czujników są zakodowane w pakiecie i 
+rozgłaszane. Tego znalezienu się w pobliżu poszkodowanego, tego własnie pakietu
+ będzie nasłuchiwać aplikacja ZRM.
+
+SCENARIUSZ 4:
+STAN WŁĄCZONY PO TRIAGE-U PIERWOTNYM - monitor włączony, dane zczytane, kategoria
+nadana przez ZRM. Przejście w ten stan jes mozliwe tylko po połączniu i po nadaniu
+stanu przez ZRM.
+
+SCENARIUSZ 5: 
+STAN WŁĄCZONY PO TRIAGE-U WTÓRNYM - monitor jest włączony, triage wtórny wystąpił
+dane nadawane takie jak po triagu pierwotnym + numer kolejnego triageu wtórnego?.
+

@@ -1,0 +1,13 @@
+ZRM - FILTROWANIE PAKIETÓW MPZ
+
+DATA:
+
+OSOBY ODPOWIEDZIALNE:
+
+SPECYFIKACJA:
+Możliwość filtrowania listy MPZ w widoku "POSZKODOWANI".
+Lista filtrów:
+	- filtr stanu
+	- filtr siły sygnału
+	- filtr odległości
+	- filtr kategorii

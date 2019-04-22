@@ -1,0 +1,24 @@
+MPZ - Projekt Urządzenia
+
+DATA:
+06.05
+
+OSOBY ODPOWIEDZIALNE:
+
+SPECYFIKACJA
+Przygotować projekt układu uirządzenia (takie jak byśmy chcieli zaprojektować,
+ a nie jakie nam wyjdzie). Kwestie jakie myślę że warto rozważyć:
+	
+- warunki w jakich będzie pracować urządzenie i utrudnienia z tym związane
+(ciężkie warunki komunikacji, rozmiar urządzenia, zanieczyszczenia które
+mogą się dostać do urządzenia, ... ?)
+- jakie sygnały życiowe będziemy zbierać, i jakie czujniki zostaną użyte
+- jaka metoda i jaki układ do komunikacji
+- jak długo taki układ ma wytrzymać na jednym ładowaniu, jakiej baterii użyć
+- jak rozmieszczone zostaną czujniki / całe urządzenie na poszkodowanym 
+  / sposób montażu
+- jaką wybrać płytke gdzie wszystkie te moduły zostaną umieszczone 
+  (opcjonalne i ambitne - projekt samej płytki)
+- konfiguracja urządzenia przed/po akcji?
+- kosztorys
+
