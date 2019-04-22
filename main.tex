@@ -19,8 +19,6 @@
 \selectlanguage{polish}
 \usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm,bindingoffset=0.5cm]{geometry}
 
-        
-
 \begin{comment}
 LATEX 101:
 
@@ -83,7 +81,7 @@ Najczęściej poszkodowani dzieleni są na cztery priorytet, a więc kolejności
 Segregacja prowadzona niezwłocznie po przybyciu na miejsce zdarzenia podmiotu ratowniczego zwana jest segregacją pierwotną (wstępną). Po wdrożeniu medycznych czynności ratunkowych wobec osób poszkodowanych z grupy o najwyższym priorytecie (czerwonej) należy przejść do drugiego etap triage’u, zwanego segregacją wtórną, czyli ponownej oceny poszkodowanych.
 \newpage
 \noindent
-W Polsce stosowane są różne procedury i zalecenia dotyczące zdarzeń masowych, które definiują sposoby postępowania i łańcuch dowodzenia podczas tych zdarzeń. Uproszczony schemat organizacji działań znajduje się na rysunku \ref{fig:org}.
+W Polsce stosowane są różne procedury i zalecenia dotyczące zdarzeń masowych, które definiują sposoby postępowania i łańcuch dowodzenia podczas tych zdarzeń \cite{procedury}. Uproszczony schemat organizacji działań znajduje się na rysunku \ref{fig:org}.
 \begin{figure}[h!]
   \centering
     \includegraphics[width=0.95\textwidth]{img/hierarchy.png}
@@ -107,11 +105,12 @@ Poniższy diagram przedstawia komunikację elementów systemu \ref{fig:arch}
   \caption{Diagram komunikacji}
   \label{fig:arch}
 \end{figure}
+\newpage
 \subsection{Czujnik}
 Czujnik odczytuje dane z symulacji pacjenta i transmitować te dane, wraz z danymi o lokalizacji dalej. Dane można transmitować w dwa miejsca w zależnośći od scenariusza - jednorazowo, do aplikacji ZRM- gdy osoba z zespołu ZRM znajduje się w pobliżu poszkodowanego i wykonuje procedure triage lub stale do aplikacji KAM, od momentu zakończeniu działania ratownika.
-
+\noindent
 Ratownik nie powinien poświęcać poszkodowanemu więcej niż minutę. Na potrzeby projektu wspomnianym narzędziem wybrany został pulsoksymetr napalcowy.
- 
+\noindent
 Pulsoksymetr - urządzenie elektroniczne służące do nieinwazyjnego pomiaru saturacji krwi, wykorzystujące pomiar pochłaniania przez tkanki promieniowania 
 o dwóch różnych długościach fal metodą pulsoksymetrii. Działa na zasadzie pomiaru pochłaniania przez czerwone krwinki w naczyniach włosowatych promieniowania o dwóch różnych długościach fali – czerwonego i podczerwonego. Mierzony sygnał składa się z dwóch składowych: stałej i zmiennej (pulsującej). Składowa zmienna opisuje absorbancję pulsującej krwi tętniczej. Na podstawie pomiaru oblicza się stopień nasycenia hemoglobiny tlenem. Pomiar oznacza procent związania hemoglobiny we krwi z tlenem (zawartości oksyhemoglobiny). Oznaczenie wartości saturacji wyraża się skrótem 'Sp' dodając chemiczny symbol gazu np. tlenu 'O2' oraz procentowy wynik badania. Pulsoksymetr mierzy też tętno.
 
@@ -124,8 +123,6 @@ Aplikacja ratownika będzie miała dwa tryby - tryb segregacji pierwotnej i tryb
 \subsubsection{Zastosowana technologia}
 
 Dystans między ratownikiem a KAM, w zależności od zdarzenia masowego, może znacznie przekraczać dystans 10m, więc komunikacja w tej domenie będzie realizowana za pomocą połączenia internetowego.
-\\
-\noindent 
 
 \newpage
 \subsection{Aplikacja Kierownika Akcji Medycznej}
@@ -139,11 +136,14 @@ Do sprawnego podejmowania prawidłowych decyzji kierownik akcji medycznej potrze
     \item możliwość przechwytywania pakietów komunikatów wysyłanych przez aplikacje poszkodowanego
 \end{itemize}
 \subsubsection{Zastosowana technologia}
-Aplikacja KAM jest centralnym punktem projektowanego systemu - łączy ona wszystkie pozostałe elementy. Z tego powodu, aplikacja ta musi działać w różnych domenach komunikacji. \\
-
-Tu o komunikacji z DK-M\\
+Aplikacja KAM jest centralnym punktem projektowanego systemu - łączy ona wszystkie pozostałe elementy. Z tego powodu, aplikacja ta musi działać w różnych domenach komunikacji. 
+\begin{itemize}
+    \item Aplikacja Poszkodowanego - nasłuchiwanie pakietów rozgłoszeniowych bluetooth, w których znajdą się zakodowane dane
+    \item Aplikacja ZRM - połączenie internetowe
+    \item Symulacja DKM - połączenie internetowe
+\end{itemize}
 Aplikacja KAM zostanie zrealizowana w formie aplikacji uruchamianej w przeglądarce internetowej. Interfejs aplikacji zostanie napisany przy użyciu biblioteki \textit{React}. Biblioteka ta została wybrana z powodu możliwości współdzielenia różnych komponentów aplikacji z aplikacją ratownika (React Native), co powinno znacznie przyspieszyć proces rozwijania obu aplikacji.
-Aplikacja uruchamiana w przeglądarce internetowej jest najlepszym rozwiązaniem, ponieważ daje to możliwość uruchamiania jej na wielu urządzeniach, niezależnie od oprogramowania na nim zainstalowanego.
+Aplikacja uruchamiana w przeglądarce internetowej jest najlepszym rozwiązaniem, ponieważ daje to możliwość uruchamiania jej na wielu urządzeniach, niezależnie od oprogramowania na nim zainstalowanego, co umożliwi łatwiejszą integracje ze sprzętem znajdującym się w karetkach\cite{sprzet}.
 \newpage
 \section{Plan realizacji projektu}
 \subsection{Organizacja pracy w grupie}
@@ -180,8 +180,19 @@ Bazy Danych i Komunikacja:
 Dokument sporządził \hspace{1cm} Dokument sprawdził\hspace{1cm} Dokument zatwierdził 
 \newline
 
- 
-
-
+\begin{thebibliography}{9}
+\bibitem{procedury} 
+Zespół powołany w dniu 18 czerwca 2014 roku
+przez Dyrektora SP ZOZ Lotnicze Pogotowie Ratunkowe
+dra n. med. Roberta Gałązkowskiego \\
+\textit{Procedury postępowania na wypadek wystąpienia zdarzenia mnogiego/masowego}
+\bibitem{sprzet}
+Wyposażenie karetek\\
+\texttt{https://gloswielkopolski.pl/ten-sprzet-ratuje-zycie-zobacz-jak-sa\\-wyposazone-karetki-poznanskiego-pogotowia-ratunkowego\\-zdjecia/ga/12994592/zd/27833720} [dostep 04-04-2019]
+\end{thebibliography}
+\begin{appendices}
+\chapter{Jakiś Dodatek}
+zawartość
+\end{appendices}
 
 \end{document}
